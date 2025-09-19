@@ -200,6 +200,7 @@ section {
 
 .skill-list {
     display: flex;
+    list-style: none;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
@@ -222,7 +223,7 @@ section {
     gap: 2rem;
 }
 
-.projects-card {
+.project-card {
     background: white;
     border-radius: 15px;
     overflow: hidden;
