@@ -212,6 +212,10 @@ section {
     font-size: 0.9rem;
 }
 
+.projects {
+    background: #fff;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
