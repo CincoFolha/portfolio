@@ -33,13 +33,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 1.5rem;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -86,7 +87,7 @@ nav {
     animation: fadeInUp 1s ease;
 }
 
-.hero-content p {
+.hero-content h2 {
     font-size: 1.3rem;
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease 0.2s both;
