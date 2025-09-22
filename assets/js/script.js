@@ -56,3 +56,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Animate elements on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.project-card, .skill-category');
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((estry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        obs.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  elements.forEach((el) => {
+    Object.assign(el.style, {
+      opacity: '0';
+      transform: 'translateY(30px)';
+      transition: 'all 0.6s ease',
+    });
+    observer.observe(el);
+  });
+});
