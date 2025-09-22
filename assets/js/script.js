@@ -16,6 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+// Header background change on scroll
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   const logo = document.querySelector('.logo');
@@ -37,6 +38,21 @@ window.addEventListener('scroll', () => {
     logo.style.color = 'white';
     links.forEach(link => {
       link.style.color = 'white';
+    });
+  }
+});
+
+// Form submission handler
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.contact-form');
+
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      alert('Obrigado pela mensagem! Entrarei em contate em breve.');
+
+      form.reset();
     });
   }
 });
