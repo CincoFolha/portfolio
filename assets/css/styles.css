@@ -293,6 +293,12 @@ section {
     background: #f8f9fa;
 }
 
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
 .contact-info h3 {
     color: #333;
     margin-bottom: 1rem;
