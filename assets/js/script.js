@@ -1,4 +1,21 @@
 
+// Smooth scroll para links de ãncora
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+
+    const targetId = link.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   const logo = document.querySelector('.logo');
