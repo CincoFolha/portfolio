@@ -18,6 +18,8 @@ body {
     padding: 0 20px;
 }
 
+
+/* Header */
 header {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -71,6 +73,8 @@ nav {
     width: 100%;
 }
 
+
+/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
@@ -111,8 +115,11 @@ nav {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+
+/* Sections */
 section {
     padding: 80px 0;
+    background: white;
 }
 
 .section-title {
@@ -134,6 +141,8 @@ section {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
+
+/* About Section */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -171,6 +180,8 @@ section {
     color: #666;
 }
 
+
+/* Skills Section */
 .skills {
     background: #f8f9fa;
 }
@@ -214,6 +225,8 @@ section {
     font-size: 0.9rem;
 }
 
+
+/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -289,6 +302,8 @@ section {
     color: #764ba2;
 }
 
+
+/* Contact Section*/
 .contact {
     background: #f8f9fa;
 }
@@ -360,6 +375,8 @@ section {
     transform: translateY(-2px);
 }
 
+
+/* Footer */
 footer {
     background: #333;
     color: white;
@@ -367,7 +384,9 @@ footer {
     padding: 2rem 0;
 }
 
-@keyframes fadeInUP {
+
+/* Animations */
+@keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -378,6 +397,7 @@ footer {
     }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
