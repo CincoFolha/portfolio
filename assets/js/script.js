@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(el.style, {
       opacity: '0';
       transform: 'translateY(30px)';
-      transition: 'all 0.6s ease',
+      transition: 'all 0.6s ease';
     });
     observer.observe(el);
   });
