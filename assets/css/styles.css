@@ -1,3 +1,14 @@
+:root {
+  --color-primary: #667eea;
+  --color-secondary: #764ba2;
+  --color-dark: #333;
+  --color-light: #f8f9fa;
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --trasition-default: all 0.3s ease;
+  --box-shadow-default: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +18,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    overflow-x: hidden
+    color: var(--color-dark);
+    background: var(--gradient-primary);
+    overflow-x: hidden;
 }
 
 .container {
@@ -28,7 +39,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: var(--transition-default);
 }
 
 nav {
@@ -54,8 +65,8 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
     position: relative;
+    transition: color 0.3s ease;
 }
 
 .nav-links a::after {
@@ -105,14 +116,14 @@ nav {
     text-decoration: none;
     border-radius: 50px;
     border: 2px solid rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    transition: var(--transition-default);
     animation: fadeInUp 1s ease 0.4s both;
 }
 
 .cta-button:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow-hover);
 }
 
 
@@ -126,7 +137,7 @@ section {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #333;
+    color: var(--color-dark);
     position: relative;
 }
 
@@ -138,7 +149,7 @@ section {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
 }
 
 
@@ -158,7 +169,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     color: white;
     font-size: 3rem;
 
@@ -166,8 +177,8 @@ section {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #667eea;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--color-primary);
+    box-shadow: var(--box-shadow-hover);
     transition: transform 0.3s ease;
 }
 
@@ -183,7 +194,7 @@ section {
 
 /* Skills Section */
 .skills {
-    background: #f8f9fa;
+    background: var(--color-light);
 }
 
 .skills-grid {
@@ -196,7 +207,7 @@ section {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-default);
     transition: transform 0.3s ease;
 }
 
@@ -205,7 +216,7 @@ section {
 }
 
 .skill-category h3 {
-    color: #667eea;
+    color: var(--color-primary);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -218,7 +229,7 @@ section {
 }
 
 .skill-tag {
-    background: #667eea;
+    background: var(--color-primary);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -237,7 +248,7 @@ section {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-hover);
     transition: transform 0.3s ease;
 }
 
@@ -247,7 +258,7 @@ section {
 
 .project-image {
     height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,7 +271,7 @@ section {
 }
 
 .project-content h3 {
-    color: #333;
+    color: var(--color-dark);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -278,8 +289,8 @@ section {
 }
 
 .tech-tag {
-    background: #f8f9fa;
-    color: #667eea;
+    background: var(--color-light);
+    color: var(--color-primary);
     padding: 3px 10px;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -292,20 +303,20 @@ section {
 }
 
 .project-link {
-    color: #667eea;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .project-link:hover {
-    color: #764ba2;
+    color: var(--color-secondary);
 }
 
 
 /* Contact Section*/
 .contact {
-    background: #f8f9fa;
+    background: var(--color-light);
 }
 
 .contact-content {
@@ -315,7 +326,7 @@ section {
 }
 
 .contact-info h3 {
-    color: #333;
+    color: var(--color-dark);
     margin-bottom: 1rem;
 }
 
@@ -330,7 +341,7 @@ section {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-default);
 }
 
 .form-group {
@@ -340,7 +351,7 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--color-dark);
     font-weight: 500;
 }
 
@@ -357,11 +368,11 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: var(--color-primary);
 }
 
 .submit-button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     color: white;
     padding: 12px 30px;
     border: none;
@@ -378,7 +389,7 @@ section {
 
 /* Footer */
 footer {
-    background: #333;
+    background: var(--color-dark);
     color: white;
     text-align: center;
     padding: 2rem 0;
