@@ -81,7 +81,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: black;
     position: relative;
 }
 
@@ -100,11 +100,11 @@ nav {
 .cta-button {
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: black;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     animation: fadeInUp 1s ease 0.4s both;
 }
