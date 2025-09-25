@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   elements.forEach((el) => {
     Object.assign(el.style, {
-      opacity: '0';
-      transform: 'translateY(30px)';
-      transition: 'all 0.6s ease';
+      opacity: '0',
+      transform: 'translateY(30px)',
+      transition: 'all 0.6s ease'
     });
     observer.observe(el);
   });
