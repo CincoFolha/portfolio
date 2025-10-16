@@ -41,6 +41,33 @@ function renderProjects(projects, containerId) {
       tech.appendChild(span);
     });
 
-    const 
+    const links = document.createElement("div");
+    links.classList.add("project-links");
+
+    const linkDemo = document.createElement("a");
+    linkDemo.classList.add("project-link");
+    linkDemo.textContent = "Ver Demo";
+
+    const linkCode = document.createElement("a");
+    linkCode.classList.add("project-link");
+    linkCode.textContent = "Código";
+
+    links.appendChild(linkDemo);
+    links.appendChild(linkCode);
+
+    content.appendChild(title);
+    content.appendChild(description);
+    content.appendChild(tech);
+    content.appendChild(links);
+
+    article.appendChild(image);
+    article.appendChild(content);
+
+    fragment.appendChild(article);
   });
+
+
+  container.append(fragment)
 }
+
+renderProjects(projects, "projects-container");
