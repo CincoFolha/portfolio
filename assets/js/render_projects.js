@@ -10,64 +10,81 @@ const projects = [
   }
 ];
 
+function createElement(tag, className, content = null) {
+  const element = document.createElement(tag);
+  if (className) element.classList.add(className);
+  if (content) element.textContent = content;
+  return element;
+}
+
+function createProjectImage(emoji) {
+  return createElement("div", "project-image", emoji);
+}
+
+function createTechTags(technologies) {
+  const techContainer = createElement("div", "project-tech");
+
+  technologies.forEach(techName => {
+    const tag = createElement("span", "tech-tag", techName);
+    techContainer.appendChild(tag);
+  });
+
+  return techContainer;
+}
+
+function createProjectLinks(demoLink, codeLink) {
+  const linksContainer = createElement("div", "project-links");
+  const demo = createElement("a", "project-link", "Ver Demo");
+  demo.href = demoLink;
+  demo.target = "_blank";
+  demo.rel = "noopener noreferrer";
+
+  const code = createElement("a", "project-link", "Código");
+  code.href = codeLink;
+  code.target = "_blank";
+  code.rel = "noopener noreferrer";
+
+  linksContainer.append(demo, code);
+  return linksContainer;
+}
+
+function createProjectContent(project) {
+  const content = createElement("div", "project-content");
+  const title = createElement("h3", "project-title", project.title);
+  const description = createElement("p", null, project.description);
+  const tech = createTechTags(project.tech);
+  const links = createProjectLinks(project.demoLink, project.codeLink);
+
+  content.append(title, description, tech, links);
+  return content;
+}
+
+function createProjectCard(project) {
+  const card = createElement("article", "project-card");
+  const image = createProjectImage(project.emoji);
+  const content = createProjectContent(project);
+
+  card.append(image, content);
+  return card;
+}
+
 function renderProjects(projects, containerId) {
   const container = document.getElementById(containerId);
+
+  if (!container) {
+    console.error('Container com id "${containerId}" não encontrado');
+    return;
+  }
+
   const fragment = document.createDocumentFragment();
 
   projects.forEach(project => {
-    const article = document.createElement("article");
-    article.classList.add("project-card");
-
-    const image = document.createElement("div");
-    image.classList.add("project-image");
-    image.textContent = project.emoji;
-
-    const content = document.createElement("div");
-    content.classList.add("project-content");
-  
-    const title = document.createElement("h3");
-    title.classList.add("project-title");
-    title.textContent = project.title;
-  
-    const description = document.createElement("p");
-    description.textContent = project.description;
-
-    const tech = document.createElement("div");
-    tech.classList.add("project-tech");
-    project.tech.forEach(techName => {
-      const span = document.createElement("span");
-      span.classList.add("tech-tag");
-      span.textContent = techName;
-      tech.appendChild(span);
-    });
-
-    const links = document.createElement("div");
-    links.classList.add("project-links");
-
-    const linkDemo = document.createElement("a");
-    linkDemo.classList.add("project-link");
-    linkDemo.textContent = "Ver Demo";
-
-    const linkCode = document.createElement("a");
-    linkCode.classList.add("project-link");
-    linkCode.textContent = "Código";
-
-    links.appendChild(linkDemo);
-    links.appendChild(linkCode);
-
-    content.appendChild(title);
-    content.appendChild(description);
-    content.appendChild(tech);
-    content.appendChild(links);
-
-    article.appendChild(image);
-    article.appendChild(content);
-
-    fragment.appendChild(article);
+    const projectCard = createProjectCard(project);
+    fragment.appendChild(projectCard);
   });
 
 
-  container.append(fragment)
+  container.appendChild(fragment)
 }
 
 renderProjects(projects, "projects-container");
