@@ -1,22 +1,4 @@
 
-const projects = [
-  {
-    emoji: "",
-    title: "",
-    description: "",
-    tech: [],
-    demoLink: "#",
-    codeLink: "#"
-  }
-];
-
-function createElement(tag, className, content = null) {
-  const element = document.createElement(tag);
-  if (className) element.classList.add(className);
-  if (content) element.textContent = content;
-  return element;
-}
-
 function createProjectImage(emoji) {
   return createElement("div", "project-image", emoji);
 }
@@ -69,12 +51,8 @@ function createProjectCard(project) {
 }
 
 function renderProjects(projects, containerId) {
-  const container = document.getElementById(containerId);
-
-  if (!container) {
-    console.error('Container com id "${containerId}" não encontrado');
-    return;
-  }
+  const container = getContainer(containerId);
+  if (!container) return;
 
   const fragment = document.createDocumentFragment();
 
@@ -86,5 +64,3 @@ function renderProjects(projects, containerId) {
 
   container.appendChild(fragment)
 }
-
-renderProjects(projects, "projects-container");
