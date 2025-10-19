@@ -1,17 +1,4 @@
 
-const skillsData = {
-  Frontend: ["JavaScript", "TypeScript", "React", "HTML5", "CSS3"],
-  Backend: ["Node.js", "Python", "SQL", "NoSQL"],
-  DevOps: ["Gradle", "Docker", "Git", "Linux", "AWS"]
-};
-
-function createElement(tag, className, content = null) {
-  const element = document.createElement(tag);
-  if (className) element.classList.add(className);
-  if (content) element.textContent = content;
-  return element;
-}
-
 function createSkillItem(skillName) {
   const li = createElement("li", null);
   const span = createElement("span", "skill-tag", skillName);
@@ -40,7 +27,9 @@ function createSkillCategory(categoryName, skills) {
 }
 
 function renderSkillSection(data, containerId) {
-  const container = document.getElementById(containerId);
+  const container = getContainer(containerId);
+  if (!container) return;
+
   const fragment = document.createDocumentFragment();
 
   Object.entries(data).forEach(([category, skills]) => {
@@ -50,6 +39,4 @@ function renderSkillSection(data, containerId) {
 
   container.appendChild(fragment);
 }
-
-renderSkillSection(skillsData, "skills-container");
 
