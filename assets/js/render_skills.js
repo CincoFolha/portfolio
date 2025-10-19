@@ -51,4 +51,5 @@ function renderSkillSection(data, containerId) {
   container.appendChild(fragment);
 }
 
-renderSkillSection(skillsData, "skills-container")
+renderSkillSection(skillsData, "skills-container");
+
