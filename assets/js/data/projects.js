@@ -12,7 +12,7 @@ const projects = [
     title: "Portfolio Interativo",
     description: "Site pessoal com animações e design responsivo",
     tech: ["HTML5", "CSS3", "JavaScript"],
-    demoLink: "https://portfolio.exemplo.com",
-    codeLink: "https://github.com/usuario/portfolio"
+    demoLink: "https://cincofolha.github.io/portfolio",
+    codeLink: "https://github.com/CincoFolha/portfolio"
   }
 ];
