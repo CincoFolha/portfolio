@@ -14,5 +14,13 @@ const projects = [
     tech: ["HTML5", "CSS3", "JavaScript"],
     demoLink: "https://cincofolha.github.io/portfolio",
     codeLink: "https://github.com/CincoFolha/portfolio"
+  },
+  {
+    emoji: "🗄️" , 
+    title: "Database Backup CLI",
+    description: "Uma ferramenta de linha de comando para backup de múltiplos sistemas de gerenciamento de banco de dados (DBMS).",
+    tech: ["Python", "Docker", "MySQL", ],
+    demoLink: "#",
+    codeLink: "#"
   }
 ];
