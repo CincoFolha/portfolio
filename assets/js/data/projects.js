@@ -1,11 +1,19 @@
 const projects = [
   {
-    emoji: "🚀",
-    title: "Sistema de Gestão",
-    description: "Plataforma completa para gerenciamento de processos empresariais",
-    tech: ["React", "Node.js", "MongoDB"],
+    emoji: "📸",
+    title: "Stories Project Clone",
+    description: "Clone moderno de Stories, inspirado no Instagram e WhatsApp, feito com React + Vite.",
+    tech: ["JavaScript", "CSS", "HTML", "React", "Vite"],
+    demoLink: "#",
+    codeLink: "https://github.com/CincoFolha/Stories-App"
+  },
+  {
+    emoji: "📝",
+    title: "Task Tracker CLI",
+    description: "Task Tracker é uma ferramenta simples para organizar e acompanhar tarefas do dia a dia.",
+    tech: ["Java", "Gradle"],
     demoLink: "https://demo.exemplo.com",
-    codeLink: "https://github.com/usuario/projeto"
+    codeLink: "https://github.com/CincoFolha/task-tracker"
   },
   {
     emoji: "💼",
@@ -21,6 +29,6 @@ const projects = [
     description: "Uma ferramenta de linha de comando para backup de múltiplos sistemas de gerenciamento de banco de dados (DBMS).",
     tech: ["Python", "Docker", "MySQL", ],
     demoLink: "#",
-    codeLink: "#"
+    codeLink: "https://github.com/CincoFolha/db-backup-cli"
   }
 ];
